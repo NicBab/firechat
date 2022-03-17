@@ -1,8 +1,12 @@
 import React from 'react'
+import { SignOut } from './index'
 
 const Chat = () => {
   return (
-    <div>Chat</div>
+    <div>
+        <SignOut />
+        Chat
+    </div>
   )
 }
 
