@@ -1,11 +1,15 @@
 import React from 'react'
 import { Chat, SignIn } from './components/index'
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from './firebase'
 
 function App() {
+
+  const [user] = useAuthState(auth)
+
   return (
     <div className="App">
-      <Chat />
-      <SignIn />
+      { user ? <Chat /> : <SignIn />}
     </div>
   );
 }
