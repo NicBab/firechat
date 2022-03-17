@@ -3,6 +3,7 @@ import { Chat, SignIn } from './components/index'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from './firebase'
 
+
 function App() {
 
   const [user] = useAuthState(auth)
